@@ -1,0 +1,53 @@
+.features {
+    background: url(../../assets/bg-2.png) no-repeat center/cover;
+    color: white;
+    padding: 40px 0;
+
+}
+
+.features-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.feature {
+    flex: 1;
+    font-size: 1.1vw;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(4px);
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature p {
+    margin-left: 20px;
+    opacity: 0.8;
+    margin-top: 3px
+}
+
+.feature span {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .features-wrapper {
+        gap: 1px;
+    }
+
+    .feature {
+
+        font-size: 2.8vw;
+    }
+
+}

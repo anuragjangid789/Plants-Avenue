@@ -1,0 +1,156 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  padding: 15px 35px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  display: flex;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  margin-left: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+.icon-wrapper {
+  position: relative;
+  align-items: center;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.2);
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #2d3e30;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);/
+}
+
+.menu-btn {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: -100%;
+    flex-direction: column;
+    background: rgba(89, 116, 90, 0.9);
+    width: 150px;
+    height: 100vh;
+    padding: 25px;
+    border-radius: 15px 0 0 15px;
+    gap: 20px;
+    transition: 0.3s;
+  }
+
+  .logo {
+    font-size: 18px;
+    margin-left: -10px;
+  }
+
+  .logo img {
+    height: 25px;
+
+  }
+
+  .nav-right {
+    font-size: 14px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 22px;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+}

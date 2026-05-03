@@ -1,0 +1,131 @@
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.login-container {
+    background: white;
+    width: 800px;
+    height: 450px;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.login-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.login-right {
+    background-color: #3c5040;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.login-right h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.login-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-right input {
+
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+
+.submit-button {
+    padding: 12px;
+    background-color: #5f8066;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #27372b;
+}
+
+
+.switch-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.switch-text span {
+    color: #c9dccb;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    background: none;
+    border: none;
+    font-size: 55px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 86%;
+        height: auto;
+        flex-direction: column;
+        margin-right: 15px;
+        position: fixed;
+    }
+
+    .login-left,
+    .login-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-right {
+        padding: 30px;
+    }
+
+    .close-button {
+        top: 5px;
+        right: 22px;
+        filter: drop-shadow(2px 3px 14px rgba(0, 0, 0, 1.8));
+    }
+}
