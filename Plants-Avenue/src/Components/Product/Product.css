@@ -85,6 +85,33 @@
   padding: 0 15px;
 }
 
+.added-popup {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #5c785e;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: popIn 0.4s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .products-slider {
     grid-template-columns: repeat(3, 1fr);
@@ -116,6 +143,15 @@
   .product-info button {
     font-size: 0.7rem;
     padding: 6px 2px;
+  }
+
+  .added-popup {
+    top: 20px;
+    padding: 10px 40px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 280px;
   }
 }
 

@@ -2,12 +2,11 @@ import "./Cart.css"
 
 function Cart({ cart, setCart, isOpen, setIsOpen }) {
 
-  // Quantity update karne ka function
   const updateQuantity = (id, amount) => {
     const updated = cart.map((item) => {
       if (item.id === id) {
         const newQty = item.quantity + amount;
-        return { ...item, quantity: newQty > 0 ? newQty : 1 }; // 1 se kam na ho
+        return { ...item, quantity: newQty > 0 ? newQty : 1 };
       }
       return item;
     });
@@ -18,7 +17,6 @@ function Cart({ cart, setCart, isOpen, setIsOpen }) {
     setCart(cart.filter((item) => item.id !== id));
   };
 
-  // Total calculation (Price * Quantity)
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
@@ -45,7 +43,6 @@ function Cart({ cart, setCart, isOpen, setIsOpen }) {
                 <h4>{item.name}</h4>
                 <p>${item.price} x {item.quantity}</p>
 
-                {/* Plus Minus Buttons */}
                 <div className="qty-controls">
                   <button onClick={() => updateQuantity(item.id, -1)}>-</button>
                   <span>{item.quantity}</span>

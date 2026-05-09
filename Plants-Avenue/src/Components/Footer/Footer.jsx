@@ -9,13 +9,11 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-wrapper">
 
-                {/* About Section */}
                 <div className="footer-para">
                     <h2>Plants Avenue</h2>
                     <p>We provide the best quality plants and help you create a green and healthy environment at your home.</p>
                 </div>
 
-                {/* Categories Section */}
                 <div className="footer-col">
                     <h3>Our Categories</h3>
                     <ul>
@@ -27,7 +25,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact Section */}
                 <div className="footer-col">
                     <h3>Contact</h3>
                     <p><FontAwesomeIcon icon={faEnvelope} /> anuragjangid789@gmail.com</p>
@@ -35,7 +32,6 @@ const Footer = () => {
                     <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Location: Jaipur</p>
                 </div>
 
-                {/* Socials & Payments Section */}
                 <div className="footer-col">
                     <h3>Follow Us</h3>
                     <div className="socials">

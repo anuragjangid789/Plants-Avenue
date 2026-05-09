@@ -18,7 +18,7 @@ function Features() {
 
                 <div className="feature">
                     <span>🌱</span>
-                    <h4>Plant Care</h4>
+                    <h4>Plants <br /> Care</h4>
                     <p>Expert guidance</p>
                 </div>
 

@@ -114,6 +114,10 @@
 
     .socials,
     .payment-methods {
+        margin-bottom: 20px;
         justify-content: center;
     }
+    .footer-col p {
+    justify-content: center; 
+}
 }
