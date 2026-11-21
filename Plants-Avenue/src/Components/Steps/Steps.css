@@ -1,68 +1,118 @@
-.steps {
-    padding: 120px 0;
-    background: #ffffff;
+.steps-section {
+  padding: 80px 0;
+  background: #ffffff;
 }
 
-.steps-wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 100px;
-    padding: 60px 130px;
+.steps-header {
+  text-align: center;
+  margin-bottom: 48px;
 }
 
-.steps-title {
-    text-align: center;
-    font-size: 34px;
-    margin-bottom: 50px;
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
 .step-card {
-    flex: 1;
-    text-align: center;
-
+  background: #fbfdfb;
+  border: 1px solid #e1ece4;
+  border-radius: 20px;
+  padding: 30px 22px;
+  text-align: center;
+  position: relative;
+  transition: all 0.25s ease;
 }
 
-.step-card:hover .icon {
-    transform: scale(1.1);
-    transition: 0.3s;
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(18, 36, 26, 0.08);
+  border-color: #bcd4c2;
 }
 
-.icon {
-    width: 60px;
-    height: 60px;
-    margin: auto;
-    margin-bottom: 15px;
+.step-number-tag {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c9dbce;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.step-icon-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #eaf3ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 20px auto;
+  transition: transform 0.3s ease;
+}
 
-    background: #0f3d2e;
-    color: white;
-    border-radius: 50%;
-
-    font-size: 22px;
+.step-card:hover .step-icon-circle {
+  transform: scale(1.1) rotate(6deg);
 }
 
 .step-card h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: #1a3124;
+  margin-bottom: 10px;
 }
 
 .step-card p {
-    font-size: 15px;
-    color: #3a3a3a;
+  color: #556c5c;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-    .steps-wrapper {
-        flex-direction: column;
-        gap: 25px;
-        padding: 0 70px;
-    }
+/* Seasonal tip banner */
+.seasonal-tip-banner {
+  background: linear-gradient(135deg, #f0f7f2 0%, #e3f0e6 100%);
+  border: 1px solid #c8e2cf;
+  border-radius: 18px;
+  padding: 20px 26px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
 
-    .steps-title {
-        font-size: 16px;
-        
-    }
+.tip-badge {
+  background: #276749;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.seasonal-tip-banner p {
+  color: #274b33;
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seasonal-tip-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

@@ -1,49 +1,66 @@
-import "./Steps.css"
+import React from 'react';
+import './Steps.css';
+
+const CARE_STEPS = [
+  {
+    icon: '☀️',
+    stepNumber: '01',
+    title: 'Sunlight Calibration',
+    desc: 'Most indoor plants crave bright indirect light. Avoid harsh noon sunbeams that can scorch delicate leaf tips.'
+  },
+  {
+    icon: '💧',
+    stepNumber: '02',
+    title: 'The Finger Moisture Test',
+    desc: 'Before watering, probe 2 inches into soil. If dry to the touch, water deeply until moisture drains from bottom drainage holes.'
+  },
+  {
+    icon: '🪴',
+    stepNumber: '03',
+    title: 'Aerated Soil & Drainage',
+    desc: 'Roots need oxygen as much as water. Ensure your ceramic or terracotta pots always have unblocked drainage holes.'
+  },
+  {
+    icon: '✂️',
+    stepNumber: '04',
+    title: 'Grooming & Leaf Polish',
+    desc: 'Dust leaves gently with a damp microfiber cloth once a month so foliage can photosynthesize cleanly and deter pests.'
+  }
+];
 
 function Steps() {
-    return (
-        <section className="steps">
-            <div className="container-steps">
-                <h1 className="steps-title">
-                    ⸺ Steps to start taking care of your plants ⸺
-                </h1>
+  return (
+    <section className="steps-section" id="care">
+      <div className="container">
+        <div className="steps-header">
+          <span className="section-badge">🌱 Green Thumb Academy</span>
+          <h2 className="section-title">4 Golden Rules for Thriving Plants</h2>
+          <p className="section-subtitle">
+            Caring for houseplants shouldn’t feel like guesswork. Follow these simple nursery principles to keep your plants lush for years.
+          </p>
+        </div>
 
-                <div className="steps-wrapper">
-
-
-                    <div className="step-card">
-                        <div className="icon">💧</div>
-                        <h3>Humidity Control</h3>
-                        <p>
-                            Maintaining the right humidity level is essential for plant growth.
-                            It helps leaves stay fresh and prevents dryness or damage.
-                        </p>
-                    </div>
-
-
-                    <div className="step-card">
-                        <div className="icon">🐛</div>
-                        <h3>Pest Anticipation</h3>
-                        <p>
-                            Keep an eye on pests that can harm your plants.
-                            Regular inspection helps you take action before damage spreads.
-                        </p>
-                    </div>
-
-
-                    <div className="step-card">
-                        <div className="icon">✂️</div>
-                        <h3>Pruning Weeds</h3>
-                        <p>
-                            Trimming unwanted leaves and weeds helps plants grow better.
-                            It improves shape and boosts overall plant health.
-                        </p>
-                    </div>
-
-                </div>
+        <div className="steps-grid">
+          {CARE_STEPS.map((step) => (
+            <div className="step-card" key={step.stepNumber}>
+              <div className="step-number-tag">{step.stepNumber}</div>
+              <div className="step-icon-circle">{step.icon}</div>
+              <h3>{step.title}</h3>
+              <p>{step.desc}</p>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+
+        {/* Seasonal Pro Tip */}
+        <div className="seasonal-tip-banner">
+          <div className="tip-badge">🌿 Seasonal Care Tip</div>
+          <p>
+            <strong>Active Growing Season:</strong> Fertilize once every 3–4 weeks with organic seaweed extract during spring and summer. Ease off feeding completely in winter dormant months!
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Steps;
