@@ -343,8 +343,30 @@
 }
 
 @media (max-width: 768px) {
+  .plant-quiz-section {
+    padding: 48px 0;
+  }
+
   .quiz-container-box {
-    padding: 24px 18px;
+    padding: 22px 16px;
+    border-radius: 22px;
+  }
+
+  .quiz-question-header h3 {
+    font-size: 1.45rem;
+  }
+
+  .quiz-option-card {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .opt-icon {
+    font-size: 1.6rem;
+  }
+
+  .opt-text strong {
+    font-size: 0.95rem;
   }
 
   .result-card-layout {

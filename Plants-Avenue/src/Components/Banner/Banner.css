@@ -162,3 +162,54 @@
     font-size: 1.85rem;
   }
 }
+
+@media (max-width: 600px) {
+  .banner-section {
+    padding: 36px 0;
+  }
+
+  .banner-card {
+    padding: 26px 18px;
+    border-radius: 22px;
+    gap: 20px;
+  }
+
+  .banner-left-text h2 {
+    font-size: 1.55rem;
+  }
+
+  .banner-left-text p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .banner-shop-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .banner-visual-cluster {
+    height: 170px;
+  }
+
+  .circle-1 {
+    width: 130px;
+    height: 130px;
+    left: 10px;
+    top: 5px;
+  }
+
+  .circle-2 {
+    width: 105px;
+    height: 105px;
+    right: 10px;
+    bottom: 5px;
+  }
+
+  .banner-leaf-badge {
+    left: 15px;
+    bottom: 0;
+    font-size: 0.72rem;
+    padding: 4px 10px;
+  }
+}

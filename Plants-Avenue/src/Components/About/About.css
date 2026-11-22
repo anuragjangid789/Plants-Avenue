@@ -17,6 +17,7 @@
 
 .about-image-column {
   position: relative;
+  width: 100%;
 }
 
 .about-photo {
@@ -120,18 +121,23 @@
   display: block;
 }
 
+.about-cta-row {
+  display: flex;
+}
+
 .about-explore-btn {
   background: #1e392a;
   color: white;
-  padding: 14px 28px;
+  padding: 13px 28px;
   border-radius: 9999px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: all 0.2s;
   box-shadow: 0 6px 18px rgba(30, 57, 42, 0.2);
+  text-decoration: none;
 }
 
 .about-explore-btn:hover {
@@ -139,24 +145,168 @@
   transform: translateY(-2px);
 }
 
+/* RESPONSIVE TABLET BREAKPOINT (max-width: 900px) */
 @media (max-width: 900px) {
+  .about-section {
+    padding: 60px 0;
+  }
+
   .about-card-wrapper {
     grid-template-columns: 1fr;
-    padding: 30px 20px;
+    padding: 32px 24px;
     gap: 32px;
+    border-radius: 26px;
   }
 
   .about-photo {
-    height: 300px;
+    height: 320px;
   }
 
   .about-experience-badge {
-    bottom: -10px;
-    right: 10px;
-    padding: 12px 16px;
+    bottom: -12px;
+    right: 12px;
+    padding: 12px 18px;
   }
 
+  .about-title {
+    font-size: 1.85rem;
+  }
+}
+
+/* RESPONSIVE MOBILE BREAKPOINT (max-width: 600px) */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 40px 0;
+  }
+
+  /* Single Column Stacked Card */
+  .about-card-wrapper {
+    grid-template-columns: 1fr;
+    padding: 18px 16px 24px 16px;
+    border-radius: 22px;
+    gap: 20px;
+    box-shadow: 0 8px 24px rgba(18, 36, 26, 0.05);
+  }
+
+  .about-image-column {
+    position: relative;
+    width: 100%;
+  }
+
+  .about-photo {
+    height: 220px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(18, 36, 26, 0.1);
+  }
+
+  /* Compact Overlay Badge on Photo */
+  .about-experience-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: auto;
+    background: rgba(18, 36, 26, 0.88);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    gap: 8px;
+  }
+
+  .badge-years {
+    font-size: 1.45rem;
+    color: #ffffff;
+  }
+
+  .badge-text {
+    font-size: 0.65rem;
+    max-width: 95px;
+    color: #cde4d3;
+    line-height: 1.25;
+  }
+
+  .about-content-column {
+    padding: 0;
+  }
+
+  .about-content-column .section-badge {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+  }
+
+  .about-title {
+    font-size: clamp(1.4rem, 5.8vw, 1.7rem);
+    line-height: 1.25;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+
+  .about-lead {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .about-description {
+    font-size: 0.82rem;
+    line-height: 1.52;
+    margin-bottom: 16px;
+  }
+
+  /* Compact 2-column or 1-column Perks on Mobile */
+  .about-perks-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .perk-box {
+    padding: 10px 10px;
+    border-radius: 12px;
+  }
+
+  .perk-icon {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+  }
+
+  .perk-box strong {
+    font-size: 0.78rem;
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+
+  .perk-box small {
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .about-cta-row {
+    width: 100%;
+  }
+
+  .about-explore-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 18px;
+    font-size: 0.88rem;
+    border-radius: 9999px;
+  }
+}
+
+@media (max-width: 360px) {
   .about-perks-grid {
     grid-template-columns: 1fr;
+  }
+
+  .badge-years {
+    font-size: 1.3rem;
+  }
+
+  .badge-text {
+    font-size: 0.6rem;
   }
 }
